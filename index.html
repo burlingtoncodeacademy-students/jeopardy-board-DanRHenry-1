@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeopardy</title>
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
-  <body>
-    <h1>Welcome to Jeopardy!</h1>
+  <body class="centered">
+    <h1>Jeopardy!</h1>
+    <img id="hero" src="./assets/jeopardy-logo.webp" alt="jeopardy_logo">
+
+  <div class="bottom">
+    <input class="nameInput centered" type="text" id= "inputFieldForP1Name" placeholder="First Player's Name">
+    <input class="nameInput centered" type="text" id= "inputFieldForP2Name" placeholder="Second Player's Name">
+
+<!-- <div class="spacer"></div> -->
+<a href="./round-1.html"><button id="startGame">Play</button></a>
+</div>
     <!-- Do not change the script source. Allows import/export to work. -->
     <script src="./scripts/index.js" type="module"></script>
   </body>
