@@ -5,10 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final Jeopardy</title>
+    <link rel="stylesheet" href="./styles/style.css">
   </head>
-  <body>
-    <h1>Final Jeopardy</h1>
+<body class="f centered">
+  <h1>Final Jeopardy</h1>
+  <div id="gameGrid">
+    <aside>
+      <div>Player 1 Score</div>
+    <div>$00,000</div>
+    <hr>
+    <div>Player 2 Score</div>
+      <div>$00,000</div>
+    </aside>
+      <div class="finalAnswerBoard">
+        <div id="finalCategory">Final Category</div>
+        <input id="finalBet" class="centered" type="number" placeholder="Place Your Bet"></input>
+      </div>
+  </div>
+<input class="centered" type="text" id= "inputFieldForAnswer" placeholder="Enter Your Question">
+
     <!-- Do not change the script source. Allows import/export to work. -->
+    <!-- <audio id="sound1" src="./assets/Jeopardy-theme-song.mp3" autoplay="autoplay"></audio> -->
     <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>
