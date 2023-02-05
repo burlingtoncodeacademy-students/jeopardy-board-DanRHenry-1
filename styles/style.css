@@ -1,11 +1,22 @@
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+
+.centered {
+    text-align: center;
+}
+
 body {
-    background-color: gray;
+    background-color: rgb(101, 101, 101);
     user-select: none;
     color: white;
     font-size: 2vw;
+    margin: 0;
 }
 
 h1 {
+    top: 0;
     text-shadow: 2px 2px 2px black;
 }
 
@@ -21,18 +32,26 @@ h1 {
     background-color: rgb(38, 22, 189);
 }
 
-.centered {
-    text-align: center;
-}
-
 .nameInput {
     margin: 1em;
 }
 
+input {
+    height:2em;
+    width: fit-content;
+    margin: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px black solid;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
 #hero {
-    margin-top: 5rem;
+    margin-top: 5vh;
     border-radius: 1em;
     width: 50vw;
+    height: 25vw;
 }
 
 .bottom * {
@@ -50,20 +69,25 @@ hr {
 #inputFieldForP1Name {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    border-top-color: gray;
+    border-left-color: gray;
 }
 
 #inputFieldForP2Name {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border-top-color: gray;
+    border-left-color: gray;
 }
-
 
 #startGame {
     font-size: 1.5em;
-    width: 8vw;
-    height: 3.5vw;
+    width: 3em;
+    height: fit-content;
     border: 2px black solid;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    border-top-color: gray;
+    border-left-color: gray;
 }
 
 #startGame:hover {
@@ -77,66 +101,52 @@ hr {
 #gameGrid {
     display: grid;
     grid-template-columns: 20%  80%;
-    /* grid-template-rows: repeat(3, 1fr); */
-    /* grid-template-areas:
-    'aside answerBoard' */
-    /* background-color: black; */
-    }
+}
 
-    #finalGrid {
-        display: grid;
-        grid-template-areas:
-        'aside answerBoard'
-        }
-    
+.finalGrid {
+    margin-left: 6vw;
+}
 
 aside {
-    /* grid-area: aside; */
     max-width: 8em;
+    max-height: fit-content;
     color: black;
     margin-left: 2vw;
     margin-right: 2vw;
     background-color: white;
-    border: 6px solid antiquewhite;
+    border: .6vw solid antiquewhite;
+    padding-bottom: 2vw;
 }
 
 aside div{
     margin: 1em 1em 0 1em;
 }
 
-
 .answerBoard {
-    /* grid-column-start: 2; */
     margin-right: 25vw;
     margin-left: 4vw;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
     background-color: blue;
-    border: 2px solid white;
+    border: .1vw solid white;
 }
 
 .finalAnswerBoard{
-    display: flex;
-    flex-direction: column;
-    position:relative;
-    left: -6em;
-    padding-bottom: auto;
+    margin-right: 25vw;
+    margin-left: 5vw;
     background-color: blue;
-    border: 3px solid white;
-    height: 13em;
-    width: 20em;
+    border: .2vw solid white;
+    min-height: fit-content;
+    max-width: 20em;
 }
 
 #finalCategory {
     font-size: 2vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 2em;
-    /* min-height: fit-content; */
-    /* margin-top: 0em; */
     padding-top: .5em;
-    padding-bottom: .5em;
-    border-bottom: 4px solid white;
+    border-bottom: .2vw solid white;
     color: black;
     background-color: rgba(255, 255, 255, 0.473);
 }
@@ -146,19 +156,14 @@ aside div{
     text-shadow: 2px 2px 2px black;
 }
 
-#finalTurn {
-    position: relative;
-    top: 10.5em;
-}
-
 #finalBet {
-    position: relative;
-    top:1em;
-    margin-top: 50%;
     margin-bottom: 0;
     min-height: fit-content;
-    font-size: 1.5vw;
+    font-size: 1vw;
     width: 10em;
+    margin-top: 0;
+    border-top-color: gray;
+    border-left-color: gray;
 }
 
 .finalQuestionAndGuess {
@@ -167,7 +172,6 @@ aside div{
     margin-right: auto;
     margin-left: auto;
     height: 2rem;
-    /* font-size: 2rem; */
 }
 
 #inputFieldForAnswer {
@@ -176,13 +180,15 @@ aside div{
     font-size: 2vw;
     width: 13em;
     border-radius: 0;
+    border-top-color: gray;
+    border-left-color: gray;
 }
 
 .finalInput {
     margin-top: 0;
-    font-size: 2vw;
-    /* font-size: large; */
+    margin-bottom: 0;
     height: 2.7vw;
+    font-size: 2vw;
     min-height: 80%;
     width: 13em;
     border-top-right-radius: 0;
@@ -197,16 +203,21 @@ aside div{
     max-height: 100%;
     width: 6em;
     max-width: 5em;
-    color: rgb(95, 95, 95);    
+    color: rgb(95, 95, 95);
+    border-top-color: gray;
+    border-left-color: gray;
 }
 
-#passBtn:active{
+#passBtn:hover, #finalBtn:hover, #guessBtn:hover, #finalBtn:active {
+    background-color: rgb(210, 210, 210);
+}
+
+#finalBtn:active, #passBtn:active, #guessBtn:active{
     background-color: gray;
     color: white;
 }
 
-
-#guessBtn{
+#guessBtn, #finalBtn{
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
     font-size: 2vw;
@@ -215,28 +226,8 @@ aside div{
     width: 6em;
     max-width: 5em;
     color: rgb(95, 95, 95);
-}
-
-#guessBtn:active{
-    background-color: gray;
-    color: white;
-}
-
-
-#finalBtn{
-    border-top-right-radius: 1em;
-    border-bottom-right-radius: 1em;
-    font-size: 2vw;
-    min-height: 3.06vw;
-    max-height: 100%;
-    width: 6em;
-    max-width: 5em;
-    color: rgb(95, 95, 95);
-}
-
-#finalBtn:active{
-    background-color: gray;
-    color: white;
+    border-top-color: gray;
+    border-left-color: gray;
 }
 
 .category {
@@ -244,14 +235,14 @@ aside div{
     padding-top: 1em;
     padding-bottom: 1em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border: 2px solid white;
+    border: .2vw solid white;
     color: black;
     background-color: rgba(255, 255, 255, 0.473);
 }
 
 .answer {
     padding-top: 1.5em;
-    border: 2px solid white;
+    border: .2vw solid white;
     margin: 0;
     font-weight: bold;
     font-size: 1.15vw;
@@ -277,40 +268,65 @@ aside div{
     right: 10%;
 }
 
-input {
-    height:2em;
+.footer {
+    display: flex;
     width: fit-content;
-    margin: 1em;
     margin-left: auto;
     margin-right: auto;
-    border: 2px black solid;
-    border-radius: 1rem;
-    font-size: 1rem;
+    text-shadow: 2px 2px 2px black;
+    font-size: 2.75vw;
 }
 
-footer {
-    position: relative;
-    top:1em;
-    /* margin-top: 10%; */
-    font-size: 2vw;
+.footer button {
+    height: fit-content;
+    padding-right: .5em;
+    padding-left: .5em;
+    font-size: 1.5vw;
 }
 
 #finalFooter {
-    /* margin-top: 4.75em; */
+    font-size: 2.75vw;
 }
 
-.nextRound {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    font-size: 1rem;
-    height: 1.5rem;
+.finalInput{
+    border-top-color: gray;
+    border-left-color: gray;
+}
+
+#finalFooter button {
+    height: fit-content;
+    padding-right: .5em;
+    padding-left: .5em;
+    font-size: 2vw;
+    margin-left: -19vw;
+    align-items: center;
 }
 
 .previousRound {
-    position: absolute;
-    top: 1em;
-    left: 1em;
-    font-size: 1rem;
     height: 1.5rem;
+    padding-inline: 2em;
+    border-top-color: gray;
+    border-right-color: black;
+    border-bottom-color: black;
+    border-left-color: gray ;
+}
+
+.previousRound > button, .nextRound > button {
+    border-color: gray black black gray;
+}
+
+.nextRound {
+    height: 1.5rem;
+    padding-inline: 2em;
+    max-height: 1rem;
+}
+
+#finalFooter {
+    margin-top: 1vh;
+    padding-top: 0;
+    margin-left: 16%;
+} 
+
+#finalFooter > .previousRound {
+    padding-right: 0;
 }

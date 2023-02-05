@@ -6,39 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Final Jeopardy</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- <link media="screen and (max-width: 991px)" rel="stylesheet" href="./styles/landscapeMobileStyle.css"> -->
   </head>
-<body class="f centered">
-  <h1>Final Jeopardy</h1>
-  <div id="finalGrid">
-    <aside>
-      <div>Player 1 Score</div>
-    <div>$00,000</div>
-    <hr>
-    <div>Player 2 Score</div>
-      <div>$00,000</div>
-    </aside>
-
+  <body class="f centered">
+    <h1>Final Jeopardy</h1>
+    <!-- Game Scores and Play Grid -->
+    <div id="gameGrid" class="finalGrid">
+      <aside>
+        <div>Player 1 Score</div>
+        <div>$00,000</div>
+        <hr>
+        <div>Player 2 Score</div>
+        <div>$00,000</div>
+      </aside>
       <div class="finalAnswerBoard">
         <div id="finalCategory">Final Category</div>
-        <div id="finalTurn" class="playerTurn">Player #: </div>
-        <input id="finalBet" class="centered" type="number" placeholder="Place Your Bet"></input>
-        <br>
-
-
-      <div class="finalQuestionAndGuess centered">
-          <input class="centered finalInput" type="text"  placeholder="Enter Your Question">
-
-          <button id="finalBtn">Guess</button>
-      </div>
-      <footer id="finalFooter">Dan Henry 2023 Upright Education Coding Lab</footer>
-
       </div>
     </div>
+  
+    <!-- Player Number -->
+        <div class="playerTurn">Player #: </div>
+        <input id="finalBet" class="centered" type="number" placeholder="Place Your Bet"></input>
+<br>
+  <!-- Enter Question, Guess -->
+    <input class="centered finalInput" type="text"  placeholder="Enter Your Question">
+    <button id="finalBtn">Guess</button>
+<!-- <br> -->
+  <!-- Exit Btn, Footer Text -->
+  <div class="flexRow" id="finalFooter">
     <a class="previousRound" href="./index.html"><button>Exit</button></a> 
-    
-
-    <!-- Do not change the script source. Allows import/export to work. -->
-    <audio id="sound1" src="./assets/Jeopardy-theme-song.mp3" autoplay="autoplay"></audio>
-    <script src="./scripts/index.js" type="module"></script>
-  </body>
+    <footer style="margin-top: 0;">Dan Henry 2023 Upright Education Coding Lab</footer>
+  </div>
+  <!-- Do not change the script source. Allows import/export to work. -->
+  <audio id="sound1" src="./assets/Jeopardy-theme-song.mp3" autoplay="autoplay"></audio>
+  <script src="./scripts/index.js" type="module"></script>
+</body>
 </html>

@@ -9,6 +9,8 @@
   </head>
 <body class="r2 centered">
   <h1>Double Jeopardy</h1>
+
+<!-- Game Scores and Play Grid -->
   <div id="gameGrid">
     <aside>
       <div>Player 1 Score</div>
@@ -56,17 +58,23 @@
         <div class="answer">2000</div>
         <div class="answer">2000</div>
       </div>
+    </div>
   </div>
-</div>
-<div class="playerTurn">Player #: </div>
-<button id="passBtn">Pass</button>
-<input class="centered" type="text" id= "inputFieldForAnswer" placeholder="Enter Your Question">
-<button id="guessBtn">Guess</button>
-<a class="nextRound" href="./final-jeopardy.html"><button>Final Jeopardy</button></a> <!-- Change this later to respond to a either timer or the answerboard running out -->
 
-<a class="previousRound" href="./index.html"><button>Exit</button></a> 
+<!-- Player Number -->
+  <div class="playerTurn">Player #: </div>
 
-<footer>Dan Henry 2023 Upright Education Coding Lab</footer>
+<!-- Pass, Enter Question, Guess -->
+  <button id="passBtn">Pass</button>
+  <input class="centered" type="text" id= "inputFieldForAnswer" placeholder="Enter Your Question">
+  <button id="guessBtn">Guess</button>
+
+<!-- Exit Btn, Footer Text, Next Round -->
+  <div class="footer">
+    <a class="previousRound" href="./index.html"><button>Exit</button></a> 
+    <footer>Dan Henry 2023 Upright Education Coding Lab</footer>
+    <a class="nextRound" href="./final-jeopardy.html"><button>Final</button></a> <!-- Change this later to respond to a either timer or the answerboard running out -->
+  </div>
     <!-- Do not change the script source. Allows import/export to work. -->
     <audio id="sound1" src="./assets/Jeopardy Board SMS.mp3" autoplay="autoplay"></audio>
     <script src="./scripts/index.js" type="module"></script>
