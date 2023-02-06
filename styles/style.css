@@ -88,9 +88,10 @@ hr {
     margin-bottom: 2rem;
     border-top-color: gray;
     border-left-color: gray;
+    color: rgb(95, 95, 95);
 }
 
-#startGame:hover {
+#startGame:hover, .previousRound > button:hover, .nextRound >button:hover {
     background-color: rgb(188, 188, 188);
 }
 
@@ -309,10 +310,12 @@ aside div{
     border-right-color: black;
     border-bottom-color: black;
     border-left-color: gray ;
+    color: rgb(95, 95, 95);
 }
 
 .previousRound > button, .nextRound > button {
     border-color: gray black black gray;
+    color: rgb(95, 95, 95);
 }
 
 .nextRound {
